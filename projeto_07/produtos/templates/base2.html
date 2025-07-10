@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}UC3{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- Arquivo CSS personalizado -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+
+
+    <style>
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .sidebar-card {
+            border: none;
+            
+        }
+
+        body {
+            background: linear-gradient(135deg, #d4d4d4, #3d31303a);
+        }
+
+        .main-content {
+            margin-top: 30px;
+        }
+
+
+        .navbar-custom {
+            background: linear-gradient(135deg, #258118, #90eb46);
+            padding-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 2, 0.3);
+        }
+
+        .navbar-nav .nav-link {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+
+    {% block navbar %}
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#"> UC3</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home"></i> </a>
+                    </li>
+                    <!-- Sobre -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-user"></i> </a>
+                    </li>
+                    <!-- Contato -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-envelope"></i> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% endblock %}
+
+</header>
+
+<!-- Conteúdo Principal -->
+
+<main>
+    
+    <div class="container my-4">
+        {% block content %}
+    
+   
+        {% endblock %}
+    </div>
+
+</main>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white mt-5 fixed-bottom">
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Sobre Nós</h5>
+                <p class="small"></p>
+            </div>
+
+            <div class="col-md-3">
+                <!-- <h5>Redes Sociais</h5>
+                <ul class="list-unstyled small">
+                    <li>
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="fab fa-instagram me-2"></i> Instagram
+                        </a>
+                    </li>
+                    <li>
+                    <li>
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="fab fa-facebook me-2"></i> Facebook
+                        </a>
+                    </li>
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="fab fa-github me-2"></i> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="fab fa-x-twitter me-2"></i>
+                            X
+                        </a>
+                    </li>
+                </ul>
+            </div> -->
+
+        <div class="text-center mt-3 pt-3 border-top">
+            <p class="small mb-0">&copy; 2025 Python UC3 - Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
